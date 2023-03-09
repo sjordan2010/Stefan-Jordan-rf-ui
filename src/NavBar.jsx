@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import Search from "./assets/Search.png";
 
 export default function NavBar({ event, formattedDate, navLinks, selected, setSelected }) {
     const links = Object.keys(navLinks)
@@ -9,16 +10,19 @@ export default function NavBar({ event, formattedDate, navLinks, selected, setSe
     }
   return (
     <nav>
-        <h4>{event.eventTitle}</h4>
+        <h1>{event.eventTitle}</h1>
         <div>
-            {event.location} || {formattedDate}
+            <h2>{event.location} • {formattedDate}</h2>
         </div>
-        <input type="search" placeholder="Search"></input>
+        <div className="search-container">
+            <img src={Search}></img>
+            <input type="search" placeholder="Search"></input>
+        </div>
 
         <ul>
             <li onClick={handleSelection}>Guide</li>
             <li onClick={handleSelection}>Attendees</li>
-                <ul>
+                <ul className="sub-list">
                     <li>Attendees</li>
                     <li>Attendee types</li>
                     <li>Packages</li>

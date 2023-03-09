@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   padding: 0;
   margin: 0;
@@ -49,10 +50,92 @@ nav {
   padding: 1.2rem 0.8rem 1.2rem 0.8rem;
   width: 21.5rem;
 }
+nav h1 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: black;
+  padding: 0.8rem 0.8rem 1.2rem 0.8rem;
+}
+nav h2 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 18px;
+  padding: 0 0.8rem 1.2rem 0.8rem;
+}
+nav .search-container {
+  padding: 0 0.8rem 1.2rem 0.8rem;
+}
+nav .search-container img {
+  position: relative;
+  top: 2rem;
+  left: 1rem;
+}
+nav input {
+  border-radius: 4px;
+  background-color: #F5F5F5;
+  padding: 0.4rem 3rem;
+  border: none;
+  width: 100%;
+}
+nav input:focus {
+  outline: none;
+}
+nav input:hover {
+  background: #e8e8e8;
+}
+nav ul {
+  width: 100%;
+  list-style-position: inside;
+  list-style-type: none;
+}
+nav ul li {
+  display: flex;
+  align-items: center;
+  height: 4rem;
+  padding: 0.8rem 1.2rem;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: #777777;
+  border-radius: 8px;
+}
+nav ul li:before {
+  content: "•";
+  font-size: 7rem;
+  margin-right: 0.5rem;
+  position: relative;
+  bottom: 0.5rem;
+}
+nav ul li:active {
+  background-color: #f4ebff;
+  color: #5C00DC;
+}
+nav ul li:hover {
+  color: #5C00DC;
+  cursor: pointer;
+}
+nav ul .sub-list {
+  list-style-type: none;
+  padding: 4px 12px 12px 48px;
+}
+nav ul .sub-list li {
+  list-style-type: none;
+  line-height: 1.4rem;
+  padding: 8px 0px;
+}
+nav ul .sub-list li:before {
+  content: "";
+  margin-right: 0.5rem;
+}
 
 .profile {
   padding: 1.2rem 0.8rem 1.2rem 0.8rem;
   align-items: center;
+  width: 6.4rem;
 }
 .profile div {
   align-items: center;
@@ -77,11 +160,22 @@ nav {
   flex-grow: 1;
 }
 
+.title-container {
+  border-bottom: 1px solid #CCCCCC;
+}
 .title-container h2 {
   font-style: normal;
   font-weight: 600;
   font-size: 2.4rem;
   line-height: 2.9rem;
+}
+.title-container p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  margin-top: 1.6rem;
+  margin-bottom: 3.4rem;
 }
 .title-container .top-title {
   gap: 1.6rem;
