@@ -16,6 +16,13 @@ html {
   height: 100vh;
   width: 100vw;
   font-size: 10px;
+  overflow-x: hidden;
+}
+
+@media (width >= 1980px) {
+  html {
+    font-size: 15px;
+  }
 }
 
 .app-container {
@@ -37,18 +44,50 @@ html {
 }
 
 .border {
-  border: 2px solid $grayborder;
+  border: 1px solid $grayborder;
 }
 
 .nav-container {
   height: 100vh;
-  padding: 1.2rem .75rem;
+}
+
+nav {
+  border-left: .1rem solid $grayborder;
+  border-right: .1rem solid $grayborder;
+  padding: 1.2rem .8rem 1.2rem .8rem;
+  // transform: translateX(-250px);
+  // transition: transform 250ms ease-in-out;
+}
+
+.profile {
+  padding: 1.2rem .8rem 1.2rem .8rem;
+  align-items: center;
+
+  div {
+    align-items: center;
+    gap: 1rem;
+
+    .event-img {
+      height: 3.2rem;
+      width: 3.2rem;
+      border-radius: 4px;
+    }
+  
+    .nav-img {
+      height: 6.4rem;
+      width: 4.8rem;
+    }
+  }
+
+  .profile-img {
+    height: 3.2rem;
+    width: 3.2rem;
+  }
 }
 
 .main-container {
   padding: 4rem 4.8rem;
   width: 100%;
-  // align-self: stretch;
 }
 
 .title-container {
@@ -93,6 +132,7 @@ html {
       padding: .8rem 1.6rem;
       border: none;
       border-radius: .4rem;
+      min-width: 10rem;
 
       &:hover {
         background: darken($purple, 10%)

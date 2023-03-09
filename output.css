@@ -9,8 +9,14 @@ html {
   height: 100vh;
   width: 100vw;
   font-size: 10px;
+  overflow-x: hidden;
 }
 
+@media (width >= 1980px) {
+  html {
+    font-size: 15px;
+  }
+}
 .app-container {
   height: 100vh;
   width: 100vw;
@@ -30,12 +36,39 @@ html {
 }
 
 .border {
-  border: 2px solid #CCCCCC;
+  border: 1px solid #CCCCCC;
 }
 
 .nav-container {
   height: 100vh;
-  padding: 1.2rem 0.75rem;
+}
+
+nav {
+  border-left: 0.1rem solid #CCCCCC;
+  border-right: 0.1rem solid #CCCCCC;
+  padding: 1.2rem 0.8rem 1.2rem 0.8rem;
+}
+
+.profile {
+  padding: 1.2rem 0.8rem 1.2rem 0.8rem;
+  align-items: center;
+}
+.profile div {
+  align-items: center;
+  gap: 1rem;
+}
+.profile div .event-img {
+  height: 3.2rem;
+  width: 3.2rem;
+  border-radius: 4px;
+}
+.profile div .nav-img {
+  height: 6.4rem;
+  width: 4.8rem;
+}
+.profile .profile-img {
+  height: 3.2rem;
+  width: 3.2rem;
 }
 
 .main-container {
@@ -79,6 +112,7 @@ html {
   padding: 0.8rem 1.6rem;
   border: none;
   border-radius: 0.4rem;
+  min-width: 10rem;
 }
 .title-container .top-title button:hover {
   background: #4700a9;
