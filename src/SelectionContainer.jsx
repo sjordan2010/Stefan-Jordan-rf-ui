@@ -1,8 +1,8 @@
 import React from 'react'
-import Attendees from './Attendees'
+import { Outlet } from 'react-router-dom'
 
 export default function SelectionContainer({ event }) {
-  return (
-    <Attendees event={event} />
-  )
+	return (
+		<Outlet context={[event]} />
+	)
 }

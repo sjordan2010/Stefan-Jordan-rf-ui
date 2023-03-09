@@ -1,10 +1,14 @@
 import React from 'react';
-import Step1 from './Step1';
-import Step2 from './Step2';
-import Step3 from './Step3';
-import PersonPortal from './assets/PersonPortal.png';
+import Step1 from '../Step1';
+import Step2 from '../Step2';
+import Step3 from '../Step3';
+import PersonPortal from '../assets/PersonPortal.png';
+import { useOutletContext } from "react-router-dom";
 
-export default function Attendees({ event }) {
+
+export default function Attendees() {
+  const [event] = useOutletContext()
+
   return (
     <div>
 

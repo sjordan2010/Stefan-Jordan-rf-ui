@@ -76,7 +76,7 @@ export default function App() {
   return (
     <div className="app-container flex">
       <NavContainer setSelected={setSelected} formattedDate={formattedDate} event={event} navLinks={event.nav} />
-      <MainContainer selected={selected} formattedDate={formattedDate} event={event} />
+      <MainContainer formattedDate={formattedDate} event={eventInfo} setEventInfo={setEventInfo} />
     </div>
   )
 };
