@@ -1,9 +1,8 @@
 import React from 'react'
 import Attendees from './Attendees'
 
-export default function SelectionContainer() {
+export default function SelectionContainer({ event }) {
   return (
-    
-    <Attendees />
+    <Attendees event={event} />
   )
 }

@@ -15,7 +15,10 @@ export default function App() {
           Attendees: {
             title: "attendee",
             step1: {
-              general: "General",
+              general: {
+                title: "General",
+                description: "blah blah blah"
+              },
               settings: [
                 { title: "Title", description: "1sample description for step 1" },
                 { title: "Title2", description: "2another sample description for step 1" },
@@ -24,10 +27,10 @@ export default function App() {
               ]
             },
             step2: [
-              { title: "1Attendee Registration", description: "1registration workflow information goes here" },
-              { title: "1Attendee Registration", description: "2registration workflow information goes here" },
-              { title: "1Attendee Registration", description: "3registration workflow information goes here" },
-              { title: "1Attendee Registration", description: "4registration workflow information goes here" },
+              { title: "1 Attendee Registration", description: "1 registration workflow information goes here" },
+              { title: "2 Attendee Registration", description: "2 registration workflow information goes here" },
+              { title: "3 Attendee Registration", description: "3 registration workflow information goes here" },
+              { title: "4 Attendee Registration", description: "4 registration workflow information goes here" },
             ],
             step3: {
               title: "Attendee Portal",

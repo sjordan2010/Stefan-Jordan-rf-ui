@@ -1,10 +1,11 @@
 import React from 'react'
+import Arrow from "./assets/Arrow.png";
 
-export default function RegWorkflow() {
+export default function RegWorkflow({ title, description }) {
   return (
-    <div className="border">
-        <strong>Attendee Registration</strong><br></br>
-        <p>Start by creating a general registration workflow.</p>
+    <div className="workflow border">
+        <header><img src={Arrow}/>{title}</header>
+        <p>{description}</p>
     </div>
   )
 }

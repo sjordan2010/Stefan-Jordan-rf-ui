@@ -4,7 +4,7 @@ import Step2 from './Step2';
 import Step3 from './Step3';
 import PersonPortal from './assets/PersonPortal.png';
 
-export default function Attendees() {
+export default function Attendees({ event }) {
   return (
     <div>
 
@@ -15,9 +15,9 @@ export default function Attendees() {
     </header>
     <div>
         <div className="steps-container flex-column">
-            <Step1 />
-            <Step2 />
-            <Step3 />
+            <Step1 event={event} />
+            <Step2 event={event} />
+            <Step3 event={event} />
         </div>
     </div>
     </div>

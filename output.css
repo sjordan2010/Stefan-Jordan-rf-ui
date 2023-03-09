@@ -47,6 +47,7 @@ html {
 
 .border {
   border: 1px solid #CCCCCC;
+  border-radius: 4px;
 }
 
 .nav-container {
@@ -147,6 +148,10 @@ nav ul .sub-list li:before {
   padding: 1.2rem 0.8rem 1.2rem 0.8rem;
   align-items: center;
   width: 6.4rem;
+}
+.profile img:hover {
+  transform: scale(1.15);
+  cursor: pointer;
 }
 .profile div {
   align-items: center;
@@ -307,6 +312,9 @@ nav ul .sub-list li:before {
   font-size: 1.3rem;
   line-height: 1.6rem;
   color: #222222;
+}
+.workflow header img {
+  max-height: 1.6rem;
 }
 .workflow p {
   font-style: normal;
