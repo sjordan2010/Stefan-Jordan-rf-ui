@@ -13,7 +13,7 @@ $grayborder: #CCCCCC;
 }
 
 html {
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   font-size: 10px;
   overflow-x: hidden;
@@ -26,12 +26,21 @@ html {
 }
 
 .app-container {
-  height: 100vh;
+  height: 100%;
   width: 100vw;
+  overflow-y: scroll;
 }
 
 .flex {
   display: flex;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.just-center {
+  justify-content: center;
 }
 
 .flex-column {
@@ -49,6 +58,8 @@ html {
 
 .nav-container {
   height: 100vh;
+  position: fixed;
+  background-color: white;
 }
 
 nav {
@@ -185,6 +196,7 @@ nav {
 .main-container {
   padding: 4rem 4.8rem;
   flex-grow: 1;
+  margin-left: 29.4rem;
 }
 
 .title-container {
@@ -246,5 +258,137 @@ nav {
         background: darken($purple, 10%)
       }
     }
+  }
+}
+
+.selection-header {
+  margin: 2.4rem 0 2.4rem 0;
+  gap: 2.4rem;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.0rem;
+  line-height: 2.4rem;
+  
+  p {
+    vertical-align: middle;
+  }
+}
+
+.steps-container {
+  gap: 2.4rem;
+}
+
+.ind-step-container {
+  gap: .8rem;
+
+  header {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    color: black;
+
+    .light-text {
+      color: $gray;
+      font-weight: 400;
+    }
+  }
+}
+
+.step1 {
+  padding: 1.6rem 2.4rem;
+  gap: 3.2rem;
+  flex-wrap: wrap;
+}
+
+.setting {
+  display: flex;
+  flex-direction: column;
+  padding: .8rem;
+  gap: .4rem;
+  width: 22.1rem;
+
+  &:hover {
+    header {
+      color: $purple;
+      cursor: auto;
+    }
+  }
+  
+  header {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+    color: $darkgray;
+  }
+
+  p {
+    color: $darkgray;
+  }
+}
+
+.workflow-container {
+  gap: 1.6rem;
+  flex-wrap: wrap;
+
+}
+.workflow {
+  display: flex;
+  flex-direction: column;
+  padding: 2.4rem 3.2rem;
+  gap: .4rem;
+  max-width: 34.1rem;
+  min-height: 12.2rem;
+  color: $darkgray;
+  flex-grow: 1;
+
+  header {
+    display: flex;
+    gap: .8rem;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+    color: $darkgray;
+  }
+  
+  p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+}
+
+.add-workflow {
+  padding: 2.4rem 3.2rem;
+  gap: .4rem;
+  width: 34.1rem;
+  min-height: 12.2rem;
+  margin-top: .8rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.portal {
+  padding: 2.4rem 3.2rem;
+  gap: .4rem;
+
+  width: 34.1rem;
+  height: 12.2rem;
+
+  background: #FFFFFF;
+
+  header {
+    display: flex;
+    gap: .8rem;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+    color: $darkgray;
   }
 }
