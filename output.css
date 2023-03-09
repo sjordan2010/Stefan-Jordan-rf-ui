@@ -47,6 +47,7 @@ nav {
   border-left: 0.1rem solid #CCCCCC;
   border-right: 0.1rem solid #CCCCCC;
   padding: 1.2rem 0.8rem 1.2rem 0.8rem;
+  width: 21.5rem;
 }
 
 .profile {
@@ -73,7 +74,7 @@ nav {
 
 .main-container {
   padding: 4rem 4.8rem;
-  width: 100%;
+  flex-grow: 1;
 }
 
 .title-container h2 {
