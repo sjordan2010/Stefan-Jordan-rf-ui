@@ -13,7 +13,7 @@ export default function Title({ event, formattedDate }) {
                 </div>
             </div>
             <div>
-                <button>Edit event</button>
+                <button className="edit-btn">Edit event</button>
             </div>
         </div>
         <div>

@@ -13,11 +13,6 @@ html {
   overflow-x: hidden;
 }
 
-@media (width >= 1980px) {
-  html {
-    font-size: 15px;
-  }
-}
 .app-container {
   height: 100%;
   width: 100vw;
@@ -219,15 +214,15 @@ nav ul .sub-list li:before {
   flex-grow: 1;
   gap: 1rem;
 }
-.title-container .top-title button {
+.title-container .top-title .edit-btn {
   background-color: #5C00DC;
   color: white;
   padding: 0.8rem 1.6rem;
   border: none;
   border-radius: 0.4rem;
-  min-width: 10rem;
+  min-width: 100px;
 }
-.title-container .top-title button:hover {
+.title-container .top-title .edit-btn:hover {
   background: #4700a9;
 }
 
@@ -356,6 +351,52 @@ nav ul .sub-list li:before {
   font-size: 1.3rem;
   line-height: 1.6rem;
   color: #222222;
+}
+
+@media (width >= 1980px) {
+  html {
+    font-size: 15px;
+  }
+}
+@media (width <= 770px) {
+  .nav-container {
+    display: none;
+  }
+  .main-container {
+    margin-left: 0;
+    padding: 1.5rem 1.7rem;
+  }
+  .title-container .top-title {
+    flex-direction: row-reverse;
+  }
+  .title-container .top-title .title-middle {
+    flex-grow: 0;
+  }
+}
+@media (width <= 415px) {
+  html {
+    font-size: 8px;
+  }
+  .workflow, .add-workflow {
+    width: 100%;
+    max-width: 100%;
+  }
+  .title-container {
+    max-width: 415px;
+  }
+  .title-container .top-title {
+    font-size: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  .title-container .top-title .title-middle {
+    flex-grow: 0;
+    text-align: end;
+  }
+  .title-container .top-title .title-middle h1 {
+    font-size: 2rem;
+  }
 }
 
 /*# sourceMappingURL=output.css.map */

@@ -19,11 +19,7 @@ html {
   overflow-x: hidden;
 }
 
-@media (width >= 1980px) {
-  html {
-    font-size: 15px;
-  }
-}
+
 
 .app-container {
   height: 100%;
@@ -59,6 +55,7 @@ html {
 
 .nav-container {
   height: 100vh;
+  // width: 100vw;
   position: fixed;
   background-color: white;
 }
@@ -253,13 +250,13 @@ nav {
       gap: 1rem;
     }
   
-    button {
+    .edit-btn {
       background-color: $purple;
       color: white;
       padding: .8rem 1.6rem;
       border: none;
       border-radius: .4rem;
-      min-width: 10rem;
+      min-width: 100px;
 
       &:hover {
         background: darken($purple, 10%)
@@ -409,3 +406,74 @@ nav {
     color: $darkgray;
   }
 }
+
+@media (width >= 1980px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (width <= 770px) {
+  .nav-container {
+    display: none;
+  }
+
+  .main-container {
+    margin-left: 0;
+    padding: 1.5rem 1.7rem;
+  }
+
+  .title-container {
+    .top-title {
+      flex-direction: row-reverse;
+  
+      .title-middle {
+        flex-grow: 0;
+      }
+  
+    }
+
+  }
+}
+
+@media (width <= 415px) {
+  html {
+    font-size: 8px;
+  }
+
+  .workflow, .add-workflow {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .title-container {
+    max-width: 415px;
+
+    .top-title {
+      font-size: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+
+     
+  
+      .title-middle {
+        flex-grow: 0;
+        text-align: end;
+  
+        h1 {
+          font-size: 2rem;
+        }
+      }
+      
+  
+      // img {
+        // padding-left: 90px;
+        // width: 4rem;
+        // height: 4rem;
+      // }
+    }
+
+  }
+}
+
