@@ -1,9 +1,14 @@
 import React from 'react'
+import NavBar from './NavBar'
+import Profile from './Profile'
 
-function NavContainer() {
+export default function NavContainer({ event, formattedDate, setSelected, navLinks }) {
+    console.log('navLinks', navLinks)
+
   return (
-    <div>NavContainer</div>
+    <div className="nav-container flex">
+        <Profile event={event} />
+        <NavBar event={event} formattedDate={formattedDate} setSelected={setSelected} navLinks={navLinks} />
+    </div>
   )
 }
-
-export default NavContainer
