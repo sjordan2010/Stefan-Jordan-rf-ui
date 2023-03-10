@@ -7,23 +7,22 @@ import { useOutletContext } from "react-router-dom";
 
 
 export default function Attendees() {
-  const [event, setEventInfo] = useOutletContext()
 
-  return (
-    <div>
+const [event, setEventInfo] = useOutletContext()
 
-   
-    <header className="selection-header flex align-center">
-        <img src={PersonPortal}></img>
-        <p>Attendee</p>
-    </header>
-    <div>
-        <div className="steps-container flex-column">
-            <Step1 event={event} />
-            <Step2 event={event} setEventInfo={setEventInfo} />
-            <Step3 event={event} />
-        </div>
-    </div>
-    </div>
-  )
+	return (
+		<div>
+			<header className="selection-header flex align-center">
+				<img src={PersonPortal}></img>
+				<p>Attendee</p>
+			</header>
+			<div>
+				<div className="steps-container flex-column">
+					<Step1 event={event} />
+					<Step2 event={event} setEventInfo={setEventInfo} />
+					<Step3 event={event} />
+				</div>
+			</div>
+		</div>
+	)
 }

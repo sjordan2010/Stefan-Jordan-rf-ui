@@ -1,11 +1,10 @@
-import React from 'react'
+import React from 'react';
 
 export default function Title({ event, setEventInfo, formattedDate }) {
 
     const handleClick = () => {
-        alert('edit info')
+        alert('edit info on Title.jsx - Line 6')
     }
-
 
     return (
         <div className="title-container flex-column">

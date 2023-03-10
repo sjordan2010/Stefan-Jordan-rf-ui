@@ -4,8 +4,6 @@ import Search from "./assets/Search.png";
 
 export default function NavBar({ event, formattedDate }) {
 
-   
-
   return (
     <nav>
         <h1>{event.eventTitle}</h1>

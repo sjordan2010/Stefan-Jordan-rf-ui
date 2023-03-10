@@ -13,5 +13,5 @@ export default function Step3({ event }) {
 				<p>{portal.description}</p>
 			</div>
 		</div>
-)
+	)
 }

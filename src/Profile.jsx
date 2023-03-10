@@ -6,8 +6,6 @@ import { Link } from 'react-router-dom';
 
 export default function Profile({ event, navLinks}) {
   
-
-
     return (
         <div className="flex">
             <div className="profile flex-column space-between">

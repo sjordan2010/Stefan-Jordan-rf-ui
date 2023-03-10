@@ -21,6 +21,7 @@ export default function Step1({ event }) {
 }
 
 function Setting({ title, description }) {
+    
     return (
         <div className="setting">
             <header>{title}</header>
