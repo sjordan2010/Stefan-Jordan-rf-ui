@@ -2,12 +2,13 @@ import React from 'react';
 import RegWorkflow from './RegWorkflow';
 import Plus from "./assets/Plus.png";
 
-export default function Step2({ event }) {
+export default function Step2({ event, setEventInfo }) {
 
     const workflows = event.nav.Attendees.step2
 
     const addWorkflow = () => {
         alert('add a workflow');
+        //setEventInfo(prev => )
     }
 
     return (

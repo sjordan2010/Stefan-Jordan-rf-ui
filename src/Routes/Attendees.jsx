@@ -7,7 +7,7 @@ import { useOutletContext } from "react-router-dom";
 
 
 export default function Attendees() {
-  const [event] = useOutletContext()
+  const [event, setEventInfo] = useOutletContext()
 
   return (
     <div>
@@ -20,7 +20,7 @@ export default function Attendees() {
     <div>
         <div className="steps-container flex-column">
             <Step1 event={event} />
-            <Step2 event={event} />
+            <Step2 event={event} setEventInfo={setEventInfo} />
             <Step3 event={event} />
         </div>
     </div>

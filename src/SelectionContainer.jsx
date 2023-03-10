@@ -1,8 +1,8 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
 
-export default function SelectionContainer({ event }) {
+export default function SelectionContainer({ event, setEventInfo }) {
 	return (
-		<Outlet context={[event]} />
+		<Outlet context={[event, setEventInfo]} />
 	)
 }
