@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import './App.scss';
+import React, { useState, useEffect } from 'react';
+import './styles/App.scss';
 import MainContainer from './MainContainer';
 import NavContainer from './NavContainer';
 import MountainLogo from './assets/MountainLogo.png';
@@ -69,11 +69,25 @@ export default function App() {
 	}
 
 	const [eventInfo, setEventInfo] = useState(event)
+	const [theme, setTheme] = useState(localStorage.getItem('theme') || 'dark');
+
+	const toggleTheme = () => {
+		if (theme === 'light') {
+			setTheme('dark');
+		} else {
+			setTheme('light');
+		}
+	};
+
+	useEffect(() => {
+		localStorage.setItem('theme', 'dark');
+		document.body.className = 'dark';
+	}, [theme]);
 
 	return (
-		<div className="app-container flex">
-		<NavContainer setSelected={setSelected} formattedDate={formattedDate} event={event} navLinks={event.nav} />
-		<MainContainer formattedDate={formattedDate} event={eventInfo} setEventInfo={setEventInfo} />
-		</div>
+		<main className="app-container flex">
+			<NavContainer formattedDate={formattedDate} event={event} />
+			<MainContainer formattedDate={formattedDate} event={eventInfo} setEventInfo={setEventInfo} />
+		</main>
 	)
 };

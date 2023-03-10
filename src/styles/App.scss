@@ -1,9 +1,10 @@
 $primary: #5C00DC;
-$darkgray: #222222;
-$gray: #444444;
-$lightgray: #777777; 
-$grayborder: #CCCCCC;
-
+$primary-text: #222222;
+$dark-text: #000000;
+$secondary-text: #444444;
+$sublist-text: #777777; 
+$border-color: #CCCCCC;
+$bg-color: #FFFFFF;
 
 * {
   padding: 0;
@@ -11,6 +12,8 @@ $grayborder: #CCCCCC;
   font-family: "Inter";
   box-sizing: border-box;
   cursor: default;
+  color: $primary-text;
+  background-color: $bg-color;
 }
 
 html {
@@ -53,16 +56,16 @@ a:-webkit-any-link {
 }
 
 .border {
-  border: 1px solid $grayborder;
+  border: 1px solid $border-color;
   border-radius: 4px;
 }
 
 .nav-container {
   height: 100vh;
   position: fixed;
-  background-color: white;
-  transition: 200px 0.3s ease-in-out;
-  z-index: 99;
+  // background-color: white;
+  // transition: 200px 0.3s ease-in-out;
+  // z-index: 99;
 }
 
 .active {
@@ -79,16 +82,17 @@ a:-webkit-any-link {
   background: none;
   border: none;
   display: none;
-
+  
   &:hover {
     cursor: pointer;
   }
-
+  
   img {
     width: 100%;
     height: 100%;
     border-radius: 5px;
-
+    background-color: transparent;
+    
     &:hover {
       cursor: pointer;
     }
@@ -116,25 +120,23 @@ a:-webkit-any-link {
 
   &:hover {
     cursor: pointer;
-    background-color: $grayborder;
+    background-color: $border-color;
     border: 1px solid $primary;
   }
 }
 
 nav {
-  border-left: .1rem solid $grayborder;
-  border-right: .1rem solid $grayborder;
+  border-left: .1rem solid $border-color;
+  border-right: .1rem solid $border-color;
   padding: 1.2rem .8rem 1.2rem .8rem;
   width: 21.5rem;
-
-  
   
   h1 {
     font-style: normal;
     font-weight: 600;
     font-size: 1.4rem;
     line-height: 1.8rem;
-    color: black;
+    color: $dark-text;
     padding: .8rem .8rem 1.2rem .8rem;
   }
 
@@ -186,7 +188,7 @@ nav {
       font-weight: 600;
       font-size: 1.4rem;
       line-height: 1.8rem;
-      color: $lightgray;
+      color: $sublist-text;
       border-radius: 8px;
 
       &:before {
@@ -263,7 +265,7 @@ nav {
 }
 
 .title-container {
-  border-bottom: 1px solid $grayborder;
+  border-bottom: 1px solid $border-color;
 
   h2 {
     font-style: normal;
@@ -350,10 +352,10 @@ nav {
     font-weight: 700;
     font-size: 1.4rem;
     line-height: 1.7rem;
-    color: black;
+    color: $dark-text;
 
     .light-text {
-      color: $gray;
+      color: $secondary-text;
       font-weight: 400;
     }
   }
@@ -384,11 +386,11 @@ nav {
     font-weight: 700;
     font-size: 1.3rem;
     line-height: 1.6rem;
-    color: $darkgray;
+    color: $primary-text;
   }
 
   p {
-    color: $darkgray;
+    color: $primary-text;
     font-style: normal;
     font-weight: 400;
     font-size: 1.2rem;
@@ -408,7 +410,7 @@ nav {
   gap: .4rem;
   max-width: 34.1rem;
   min-height: 12.2rem;
-  color: $darkgray;
+  color: $primary-text;
   flex-grow: 1;
 
   &:hover {
@@ -422,7 +424,7 @@ nav {
     font-weight: 700;
     font-size: 1.3rem;
     line-height: 1.6rem;
-    color: $darkgray;
+    color: $primary-text;
 
     img {
       max-height: 1.6rem;;
@@ -452,6 +454,8 @@ nav {
   }
 
   header, img {
+    background-color: transparent;
+
     &:hover {
       cursor: pointer;
     }
@@ -472,7 +476,7 @@ nav {
     font-weight: 700;
     font-size: 1.3rem;
     line-height: 1.6rem;
-    color: $darkgray;
+    color: $primary-text;
   }
 }
 

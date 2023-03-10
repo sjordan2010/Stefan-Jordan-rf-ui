@@ -5,6 +5,8 @@
   font-family: "Inter";
   box-sizing: border-box;
   cursor: default;
+  color: #222222;
+  background-color: #FFFFFF;
 }
 
 html {
@@ -54,9 +56,6 @@ a:-webkit-any-link {
 .nav-container {
   height: 100vh;
   position: fixed;
-  background-color: white;
-  transition: 200px 0.3s ease-in-out;
-  z-index: 99;
 }
 
 .active {
@@ -81,6 +80,7 @@ a:-webkit-any-link {
   width: 100%;
   height: 100%;
   border-radius: 5px;
+  background-color: transparent;
 }
 .toggle-nav-btn img:hover {
   cursor: pointer;
@@ -123,7 +123,7 @@ nav h1 {
   font-weight: 600;
   font-size: 1.4rem;
   line-height: 1.8rem;
-  color: black;
+  color: #000000;
   padding: 0.8rem 0.8rem 1.2rem 0.8rem;
 }
 nav h2 {
@@ -309,7 +309,7 @@ nav ul .sub-list li:before {
   font-weight: 700;
   font-size: 1.4rem;
   line-height: 1.7rem;
-  color: black;
+  color: #000000;
 }
 .ind-step-container header .light-text {
   color: #444444;
@@ -399,6 +399,9 @@ nav ul .sub-list li:before {
   background-color: #e6e6e6;
   transform: scale(1.05);
   border-color: #5C00DC;
+}
+.add-workflow header, .add-workflow img {
+  background-color: transparent;
 }
 .add-workflow header:hover, .add-workflow img:hover {
   cursor: pointer;
