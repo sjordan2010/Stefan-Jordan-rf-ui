@@ -1,4 +1,4 @@
-$purple: #5C00DC;
+$primary: #5C00DC;
 $darkgray: #222222;
 $gray: #444444;
 $lightgray: #777777; 
@@ -10,6 +10,7 @@ $grayborder: #CCCCCC;
   margin: 0;
   font-family: "Inter";
   box-sizing: border-box;
+  cursor: default;
 }
 
 html {
@@ -58,22 +59,75 @@ a:-webkit-any-link {
 
 .nav-container {
   height: 100vh;
-  // width: 100vw;
   position: fixed;
   background-color: white;
+  transition: 200px 0.3s ease-in-out;
+  z-index: 99;
 }
 
 .active {
-  background-color: lighten($purple, 53%);
-  color: $purple;
+  background-color: lighten($primary, 53%);
+  color: $primary;
 }
 
+.toggle-nav-btn {
+  position: absolute;
+  left: 29.5rem;
+  top: 1.5rem;
+  height: 35px;
+  width: 35px;
+  background: none;
+  border: none;
+  display: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.close-btn {
+  position: absolute;
+  border: none;
+  left: 24rem;
+  top: 1.5rem;
+  height: 35px;
+  width: 35px;
+  color: $primary;
+  font-size: 3rem;
+  vertical-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 4px;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: row-reverse;  display: none;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $grayborder;
+    border: 1px solid $primary;
+  }
+}
 
 nav {
   border-left: .1rem solid $grayborder;
   border-right: .1rem solid $grayborder;
   padding: 1.2rem .8rem 1.2rem .8rem;
   width: 21.5rem;
+
+  
   
   h1 {
     font-style: normal;
@@ -143,15 +197,10 @@ nav {
         bottom: .5rem;
       }
 
-      // .active {
-      //   background-color: lighten($purple, 53%);
-      //   // color: $purple;
-      //   color: red;
-      // }
-
       &:hover {
-        color: $purple;
+        color: $primary;
         cursor: pointer;
+        transform: scale(1.1)
       }
 
     }
@@ -261,7 +310,7 @@ nav {
     }
   
     .edit-btn {
-      background-color: $purple;
+      background-color: $primary;
       color: white;
       padding: .8rem 1.6rem;
       border: none;
@@ -269,7 +318,8 @@ nav {
       min-width: 100px;
 
       &:hover {
-        background: darken($purple, 10%)
+        background: darken($primary, 10%);
+        cursor: pointer;
       }
     }
   }
@@ -324,9 +374,9 @@ nav {
 
   &:hover {
     header {
-      color: $purple;
-      cursor: auto;
+      color: $primary;
     }
+    cursor: default;
   }
   
   header {
@@ -361,6 +411,10 @@ nav {
   color: $darkgray;
   flex-grow: 1;
 
+  &:hover {
+    border-color: $primary;
+  }
+
   header {
     display: flex;
     gap: .8rem;
@@ -393,17 +447,22 @@ nav {
   &:hover {
     cursor: pointer;
     background-color: darken(white, 10%);
-    transform: scale(1.05)
+    transform: scale(1.05);
+    border-color: $primary;
+  }
+
+  header, img {
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
 
 .portal {
   padding: 2.4rem 3.2rem;
   gap: .4rem;
-
   width: 34.1rem;
   height: 12.2rem;
-
   background: #FFFFFF;
 
   header {
@@ -425,7 +484,24 @@ nav {
 
 @media (width <= 770px) {
   .nav-container {
-    display: none;
+    left: -27.9rem;
+    position: absolute;
+  }
+
+  .navOpen {
+    transform: translateX(27.9rem); 
+  }
+
+  .toggle-nav-btn {
+    display: flex;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .close-btn {
+    display: flex;
   }
 
   .main-container {
@@ -435,20 +511,25 @@ nav {
 
   .title-container {
     .top-title {
-      flex-direction: row-reverse;
-  
+      margin-left: 20vw;
+
       .title-middle {
         flex-grow: 0;
       }
-  
     }
-
   }
 }
 
-@media (width <= 415px) {
+@media (width <= 515px) {
   html {
     font-size: 8px;
+  }
+
+  .close-btn {
+    left: 23.5rem;
+    top: 1.2rem;
+    height: 30px;
+    width: 30px;
   }
 
   .workflow, .add-workflow {
@@ -464,8 +545,6 @@ nav {
       display: flex;
       flex-wrap: wrap;
       justify-content: flex-end;
-
-     
   
       .title-middle {
         flex-grow: 0;
@@ -475,15 +554,7 @@ nav {
           font-size: 2rem;
         }
       }
-      
-  
-      // img {
-        // padding-left: 90px;
-        // width: 4rem;
-        // height: 4rem;
-      // }
     }
-
   }
 }
 

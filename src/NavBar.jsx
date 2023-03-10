@@ -2,13 +2,10 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import Search from "./assets/Search.png";
 
-export default function NavBar({ event, formattedDate, navLinks, selected, setSelected }) {
-    const links = Object.keys(navLinks)
-    const [highlighted, setHighlighted] = useState(selected);
+export default function NavBar({ event, formattedDate }) {
 
-    const handleSelection = (e) => {
-        setSelected(prev => prev = e.target.innerHTML)
-    }
+   
+
   return (
     <nav>
         <h1>{event.eventTitle}</h1>
@@ -19,6 +16,8 @@ export default function NavBar({ event, formattedDate, navLinks, selected, setSe
             <img src={Search}></img>
             <input type="search" placeholder="Search"></input>
         </div>
+        
+
 
         <ul>
         {/* HAVE TO DESCTRUCTURE isActive & isPending */}

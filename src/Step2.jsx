@@ -6,6 +6,10 @@ export default function Step2({ event }) {
 
     const workflows = event.nav.Attendees.step2
 
+    const addWorkflow = () => {
+        alert('add a workflow');
+    }
+
     return (
     <div className="ind-step-container flex-column">
         <header><strong>Step 2: </strong><span className="light-text">Build registration workflows.</span></header>
@@ -14,7 +18,7 @@ export default function Step2({ event }) {
                 <RegWorkflow key={i} title={el.title} description={el.description} />
             ))}
         </div>
-        <div className="add-workflow border flex-column align-center just-center">
+        <div onClick={addWorkflow} className="add-workflow border flex-column align-center just-center">
             <img src={Plus}/>
             <header>Add Registration Workflow</header>
         </div>

@@ -1,16 +1,13 @@
-import React, { useState }from 'react';
+import React from 'react';
 import NavLogo from './assets/NavLogo.png';
 import Initials from './assets/Initials.png';
 import { Link } from 'react-router-dom';
 
 
-export default function Profile({ event, formattedDate, navLinks, selected, setSelected }) {
-    const links = Object.keys(navLinks)
-    const [highlighted, setHighlighted] = useState(selected);
+export default function Profile({ event, navLinks}) {
+  
 
-    const handleSelection = (e) => {
-        setSelected(prev => prev = e.target.innerHTML)
-    }
+
     return (
         <div className="flex">
             <div className="profile flex-column space-between">

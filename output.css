@@ -4,6 +4,7 @@
   margin: 0;
   font-family: "Inter";
   box-sizing: border-box;
+  cursor: default;
 }
 
 html {
@@ -11,6 +12,11 @@ html {
   width: 100vw;
   font-size: 10px;
   overflow-x: hidden;
+}
+
+a:-webkit-any-link {
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .app-container {
@@ -49,6 +55,61 @@ html {
   height: 100vh;
   position: fixed;
   background-color: white;
+  transition: 200px 0.3s ease-in-out;
+  z-index: 99;
+}
+
+.active {
+  background-color: #f4ebff;
+  color: #5C00DC;
+}
+
+.toggle-nav-btn {
+  position: absolute;
+  left: 29.5rem;
+  top: 1.5rem;
+  height: 35px;
+  width: 35px;
+  background: none;
+  border: none;
+  display: none;
+}
+.toggle-nav-btn:hover {
+  cursor: pointer;
+}
+.toggle-nav-btn img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+.toggle-nav-btn img:hover {
+  cursor: pointer;
+}
+
+.close-btn {
+  position: absolute;
+  border: none;
+  left: 24rem;
+  top: 1.5rem;
+  height: 35px;
+  width: 35px;
+  color: #5C00DC;
+  font-size: 3rem;
+  vertical-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 4px;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: row-reverse;
+  display: none;
+}
+.close-btn:hover {
+  cursor: pointer;
+  background-color: #CCCCCC;
+  border: 1px solid #5C00DC;
 }
 
 nav {
@@ -117,13 +178,10 @@ nav ul li:before {
   position: relative;
   bottom: 0.5rem;
 }
-nav ul li:active {
-  background-color: #f4ebff;
-  color: #5C00DC;
-}
 nav ul li:hover {
   color: #5C00DC;
   cursor: pointer;
+  transform: scale(1.1);
 }
 nav ul .sub-list {
   list-style-type: none;
@@ -224,6 +282,7 @@ nav ul .sub-list li:before {
 }
 .title-container .top-title .edit-btn:hover {
   background: #4700a9;
+  cursor: pointer;
 }
 
 .selection-header {
@@ -270,9 +329,11 @@ nav ul .sub-list li:before {
   gap: 0.4rem;
   width: 22.1rem;
 }
+.setting:hover {
+  cursor: default;
+}
 .setting:hover header {
   color: #5C00DC;
-  cursor: auto;
 }
 .setting header {
   font-style: normal;
@@ -304,6 +365,9 @@ nav ul .sub-list li:before {
   color: #222222;
   flex-grow: 1;
 }
+.workflow:hover {
+  border-color: #5C00DC;
+}
 .workflow header {
   display: flex;
   gap: 0.8rem;
@@ -334,6 +398,10 @@ nav ul .sub-list li:before {
   cursor: pointer;
   background-color: #e6e6e6;
   transform: scale(1.05);
+  border-color: #5C00DC;
+}
+.add-workflow header:hover, .add-workflow img:hover {
+  cursor: pointer;
 }
 
 .portal {
@@ -360,22 +428,41 @@ nav ul .sub-list li:before {
 }
 @media (width <= 770px) {
   .nav-container {
-    display: none;
+    left: -27.9rem;
+    position: absolute;
+  }
+  .navOpen {
+    transform: translateX(27.9rem);
+  }
+  .toggle-nav-btn {
+    display: flex;
+  }
+  .toggle-nav-btn:hover {
+    transform: scale(1.1);
+  }
+  .close-btn {
+    display: flex;
   }
   .main-container {
     margin-left: 0;
     padding: 1.5rem 1.7rem;
   }
   .title-container .top-title {
-    flex-direction: row-reverse;
+    margin-left: 20vw;
   }
   .title-container .top-title .title-middle {
     flex-grow: 0;
   }
 }
-@media (width <= 415px) {
+@media (width <= 515px) {
   html {
     font-size: 8px;
+  }
+  .close-btn {
+    left: 23.5rem;
+    top: 1.2rem;
+    height: 30px;
+    width: 30px;
   }
   .workflow, .add-workflow {
     width: 100%;
