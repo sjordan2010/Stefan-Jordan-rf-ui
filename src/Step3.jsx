@@ -1,5 +1,4 @@
-import React from 'react';
-import Shape from "./assets/Shape.png";
+import Shape from "/Shape.png";
 
 export default function Step3({ event }) {
 

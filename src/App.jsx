@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import './styles/App.scss';
 import MainContainer from './MainContainer';
 import NavContainer from './NavContainer';
-import MountainLogo from './assets/MountainLogo.png';
+import MountainLogo from '/MountainLogo.png';
 
 export default function App() {
 

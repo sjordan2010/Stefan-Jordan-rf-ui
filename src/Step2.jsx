@@ -1,6 +1,5 @@
-import React from 'react';
 import RegWorkflow from './RegWorkflow';
-import Plus from "./assets/Plus.png";
+import Plus from "/Plus.png";
 
 export default function Step2({ event, setEventInfo }) {
 

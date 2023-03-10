@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import NavBar from './NavBar';
 import Profile from './Profile';
-import Hamburger from "./assets/hamburger.png";
+import Hamburger from "/hamburger.png";
 
 
 export default function NavContainer({ event, formattedDate }) {

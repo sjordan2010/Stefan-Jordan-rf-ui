@@ -1,5 +1,4 @@
-import React from 'react';
-import Arrow from "./assets/Arrow.png";
+import Arrow from "/Arrow.png";
 
 export default function RegWorkflow({ title, description }) {
 	

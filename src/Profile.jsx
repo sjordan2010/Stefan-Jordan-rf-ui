@@ -1,6 +1,5 @@
-import React from 'react';
-import NavLogo from './assets/NavLogo.png';
-import Initials from './assets/Initials.png';
+import NavLogo from '/NavLogo.png';
+import Initials from '/Initials.png';
 import { Link } from 'react-router-dom';
 
 

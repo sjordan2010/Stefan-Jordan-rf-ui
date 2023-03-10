@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import Search from "./assets/Search.png";
+import Search from "/Search.png";
 
 export default function NavBar({ event, formattedDate }) {
 
