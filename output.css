@@ -55,6 +55,7 @@ a:-webkit-any-link {
 .nav-container {
   height: 100vh;
   position: fixed;
+  background-color: white;
 }
 
 .active {

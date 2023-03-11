@@ -33,9 +33,13 @@ export default function NavContainer({ event }) {
     >
       <Profile eventImage={event.img} />
       <NavBar event={event} />
-      <button type="button" className="toggle-nav-btn" onClick={toggleNavBar}>
-        <img src={Hamburger} />
-      </button>
+
+      {open ? null : (
+        <button type="button" className="toggle-nav-btn" onClick={toggleNavBar}>
+          <img src={Hamburger} />
+        </button>
+      )}
+
       <button type="button" className="close-btn" onClick={toggleNavBar}>
         &times;
       </button>
