@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom';
+import Bullet from '../../public/Bullet';
 import { useFormattedDate } from '../utils/dateParsers';
 import Search from '/Search.png';
 
@@ -22,7 +23,7 @@ export default function NavBar({ event }) {
         <StyledNavLink title="Guide" />
         <StyledNavLink title="Attendees" />
         <ul className="sub-list">
-          <li>Attendees</li>
+          <li> Attendees</li>
           <li>Attendee types</li>
           <li>Packages</li>
           <li>Reg codes</li>
@@ -38,7 +39,12 @@ export default function NavBar({ event }) {
 function StyledNavLink({ title }) {
   return (
     <NavLink to={`/${title.toLowerCase()}`}>
-      {(renderProps) => <li className={getClassName(renderProps)}>{title}</li>}
+      {(renderProps) => (
+        <li className={getClassName(renderProps)}>
+          <Bullet />
+          {title}
+        </li>
+      )}
     </NavLink>
   );
 }

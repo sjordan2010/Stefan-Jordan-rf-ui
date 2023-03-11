@@ -23,6 +23,12 @@ html {
   overflow-x: hidden;
 }
 
+// svg {
+//   path {
+//     fill: $primary;
+//   }
+// }
+
 a:-webkit-any-link {
   text-decoration: none;
   cursor: pointer;
@@ -69,6 +75,12 @@ a:-webkit-any-link {
 .active {
   background-color: lighten($primary, 53%);
   color: $primary;
+
+  svg {
+    rect {
+      fill: $primary;
+    }
+  }
 }
 
 .toggle-nav-btn {
@@ -175,12 +187,13 @@ nav {
 
   ul {
     width: 100%;
-    list-style-position: inside;
+    // list-style-position: inside;
     list-style-type: none;
 
     li {
       display: flex;
       align-items: center;
+      gap: 1.2rem;
       height: 4rem;
       padding: 0.8rem 1.2rem;
       font-style: normal;
@@ -190,18 +203,17 @@ nav {
       color: $sublist-text;
       border-radius: 8px;
 
-      &:before {
-        content: '•';
-        font-size: 7rem;
-        margin-right: 0.5rem;
-        position: relative;
-        bottom: 0.5rem;
-      }
-
       &:hover {
         color: $primary;
         cursor: pointer;
         transform: scale(1.1);
+
+        svg {
+          rect {
+            fill: $primary;
+            cursor: pointer;
+          }
+        }
       }
     }
     .sub-list {
@@ -228,9 +240,10 @@ nav {
   align-items: center;
   width: 6.4rem;
 
-  .event-img, svg {
-
-    path, rect {
+  .event-img,
+  svg {
+    path,
+    rect {
       &:hover {
         cursor: pointer;
       }
@@ -425,7 +438,6 @@ nav {
     font-size: 1.3rem;
     line-height: 1.6rem;
     color: $primary-text;
-    
 
     img {
       max-height: 1.6rem;

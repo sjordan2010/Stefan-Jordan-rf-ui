@@ -5,7 +5,7 @@ export default function Step2({ event, setEvent }) {
   const workflows = event.nav.Attendees.step2;
 
   const addWorkflow = () => {
-    // alert('add a workflow on Step2.jsx - Line 10');
+    alert('add a workflow on Step2.jsx - Line 10');
     setEvent((prev) => ({
       ...prev,
       nav: {

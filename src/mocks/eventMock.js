@@ -3,7 +3,7 @@ import MountainLogo from '/MountainLogo.png';
 export const sampleEvent = {
   eventId: '12345',
   eventTitle: 'RainFocus Summit',
-  date: new Date('December 15, 2023'), // can be serialized?? JSON
+  date: new Date('December 15, 2023'),
   location: 'Lehi, Utah',
   img: MountainLogo,
   nav: {
