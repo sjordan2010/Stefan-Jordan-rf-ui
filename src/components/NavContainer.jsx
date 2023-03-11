@@ -28,7 +28,7 @@ export default function NavContainer({ event }) {
 
   return (
     <aside
-      className={`${open ? 'navOpen slide-in' : 'navClosed slide-out'} nav-container flex`}
+      className={`${open ? 'navOpen' : 'navClosed'} nav-container flex`}
       ref={ref}
     >
       <Profile eventImage={event.img} />

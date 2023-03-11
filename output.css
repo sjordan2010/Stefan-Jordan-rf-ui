@@ -441,6 +441,11 @@ nav ul .sub-list li:before {
   }
   .navOpen {
     transform: translateX(27.9rem);
+    transition: 0.3s ease-in-out;
+  }
+  .navClosed {
+    transform: translateX(0rem);
+    transition: 0.3s ease-in-out;
   }
   .toggle-nav-btn {
     display: flex;

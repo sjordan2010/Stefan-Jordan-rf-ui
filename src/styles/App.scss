@@ -23,12 +23,6 @@ html {
   overflow-x: hidden;
 }
 
-// svg {
-//   path {
-//     fill: $primary;
-//   }
-// }
-
 a:-webkit-any-link {
   text-decoration: none;
   cursor: pointer;
@@ -508,6 +502,12 @@ nav {
 
   .navOpen {
     transform: translateX(27.9rem);
+    transition: 0.3s ease-in-out;
+  }
+
+  .navClosed {
+    transform: translateX(0rem);
+    transition: 0.3s ease-in-out;
   }
 
   .toggle-nav-btn {
